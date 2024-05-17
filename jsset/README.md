@@ -1,4 +1,4 @@
-# group4-jsset
+# jsset
 
 This is our remake of the Game of Set using JavaScript. To play the game, download the most recent version and open the GameOfSet.html file in your browser.
 
