@@ -1,4 +1,3 @@
-# Lab2 Readme
 ### Game of Set
 
 ### Documentation 
@@ -17,10 +16,3 @@ A set consists of three cards meeting all of these conditions:
 * They all have the same shape or have three different shape.
 * They all have the same shade or have three different shade.
 
-### Roles
-* Project Leader: Jordan Chodak
-* Code: Arvind Kumar
-* GUI: Michael Appugliese
-* Checking: Junyao Ren, Michael Appugliese
-* Documentation: Skylar Vines
-* Comment: Junyao Ren
