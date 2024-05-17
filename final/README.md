@@ -1,4 +1,4 @@
-# Group 4 Final Project: Presentation Feedback Web Application README
+# Final Report
 
 This is the README for Group 4, Project 6 in which we created a web application to streamline collection, collation, and analysis of audience surveys for presentations.
 
