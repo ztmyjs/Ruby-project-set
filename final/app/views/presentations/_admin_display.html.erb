@@ -1,0 +1,21 @@
+<div id="admin_presentations_display">
+    <%= link_to 'New Presentation', new_presentation_path %>
+
+    <br>
+    <% @teams.each do |team| %>
+        <div class="team_presentation_display">
+        <div>
+            <div><h3><%= team.name %></h3></div>
+        </div>
+        <% team.presentations.each do |p| %>
+            <div class="presentation_display_element">
+            <div><h3><%= p.name %></h3></div>
+            <div><%= link_to "View", p %></div>
+            <div><%= link_to "Remove", p, method: :delete, data: { confirm: "Are you sure?" } %></div>
+            </div>
+        <% end %>
+        
+        </div>
+
+    <% end %>
+</div>

@@ -1,0 +1,24 @@
+<div id="users_presentations_display">
+    <% @teams.each do |team| %>
+        <div class="team_presentation_display">
+            <h2><%= team.name %></h2>
+            <% team.presentations.each do |p| %>
+                <div class="presentation_display_element">
+                    <div><h3><%= p.name %></h3></div>
+                    <div><p class="survey_status">
+                    <% if current_user.surveys.exists?(:presentation_id => p.id) %>
+                        <%= "Survey Complete" %>
+                    <% elsif current_user.teams.exists?(:id => team.id) %>
+                        <%= link_to 'View Feedback', p %>
+                    <% else %>
+                        <%= link_to 'Take Survey', surveys_new_path(p_id: p.id) %>
+                    <% end %>
+                    </p></div>
+                </div>
+            <% end %>
+        </div>
+    <% end %>
+</div>
+
+
+

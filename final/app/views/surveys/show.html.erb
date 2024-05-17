@@ -1,0 +1,136 @@
+<div id="survey_display">
+    <h2>Survey for "<%= @survey.presentation.name %>"</h2>
+    <% if current_user.admin == true %>
+        <h3>By <%= @survey.user.email %>
+    <% end %>
+    <table class="survey_response_table">
+        <tr>
+            <th>Presentation Organization</th>
+            <th>Response</th>
+        </tr>
+
+        <tr>
+            <td>The introduction gave me a clear idea of the topic.</td>
+            <td><%= @survey.organization_1 %></td>
+        </tr>
+
+        <tr>
+            <td>The introduction gave me a clear idea of the direction the presentation would take.</td>
+            <td><%= @survey.organization_2 %></td>
+        </tr>
+
+        <tr>
+            <td>The presentation presented information in logical, interesting sequence.</td>
+            <td><%= @survey.organization_3 %></td>
+        </tr>
+
+        <tr>
+            <td>The conclusion did a good job of summarizing the content of the presentation.</td>
+            <td><%= @survey.organization_4 %></td>
+        </tr>
+
+        <tr>
+            <td>Enough essential information was given to allow me to effectively evaluate the topic.</td>
+            <td><%= @survey.organization_5 %></td>
+        </tr>
+
+        <tr>
+            <td>The presentation was free from irrelevant or filler information.</td>
+            <td><%= @survey.organization_6 %></td>
+        </tr>
+
+        <tr>
+            <td>The presentation filled the time allotted.</td>
+            <td><%= @survey.organization_7 %></td>
+        </tr>
+        
+    </table>
+
+    <table class="survey_response_table">
+        <tr>
+            <th>Presentation Content</th>
+            <th>Response</th>
+        </tr>
+
+        <tr>
+            <td>I could easily follow the main points of the presentation.</td>
+            <td><%= @survey.content_1 %></td>
+        </tr>
+
+        <tr>
+            <td>The presenter had a clear understanding of the material presented.</td>
+            <td><%= @survey.content_2 %></td>
+        </tr>
+
+        <tr>
+            <td>The plans, recommendations and/or conclusions are consistent with the findings.</td>
+            <td><%= @survey.content_3 %></td>
+        </tr>
+
+        <tr>
+            <td>Presenter answers all questions with explanations and elaboration.</td>
+            <td><%= @survey.content_4 %></td>
+        </tr>
+
+    </table>
+
+    <table class="survey_response_table">
+        <tr>
+            <th>Presentation Visuals</th>
+            <th>Response</th>
+        </tr>
+
+        <tr>
+            <td>The visuals were effective in enhancing the message.</td>
+            <td><%= @survey.visuals_1 %></td>
+        </tr>
+
+        <tr>
+            <td>The visuals were legible and easy to read.</td>
+            <td><%= @survey.visuals_2 %></td>
+        </tr>
+
+        <tr>
+            <td>Visuals were free from grammar and formatting errors.</td>
+            <td><%= @survey.visuals_3 %></td>
+        </tr>
+
+        <tr>
+            <td>The number of visual aids enhanced the presentation.</td>
+            <td><%= @survey.visuals_4 %></td>
+        </tr>
+
+        <tr>
+            <td>The visuals were displayed for an appropriate time and had no annoying transition effect.</td>
+            <td><%= @survey.visuals_5 %></td>
+        </tr>
+
+    </table>
+
+    <table class="survey_response_table">
+        <tr>
+            <th>Presentation Delivery</th>
+            <th>Response</th>
+        </tr>
+
+        <tr>
+            <td>The presenter spoke clearly, was easily heard, and maintained an appropriate talking rate.</td>
+            <td><%= @survey.delivery_1 %></td>
+        </tr>
+
+        <tr>
+            <td>The presenter maintained a good posture and made effective use of hand and body gesture.</td>
+            <td><%= @survey.delivery_2 %></td>
+        </tr>
+
+        <tr>
+            <td>The presenter maintained eye contact with the audience.</td>
+            <td><%= @survey.delivery_3 %></td>
+        </tr>
+
+    </table>
+
+    <p>Overall, this user rated the quality of the presentation as: <%= @survey.overall %><p>
+    <p>Additional comments: <%= @survey.comments %>
+
+</div>

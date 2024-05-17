@@ -1,0 +1,33 @@
+<div id="teams_index">
+      <div class="teams_index_header">
+        <h2>Teams</h2>
+        <%= link_to 'New Team', new_team_path %>
+      </div>
+      
+
+
+
+      
+
+      <br>
+
+      <% @teams.each do |team| %>
+        <div class="admin_team_presentation_display">
+          <div class="team_header">
+            <div><h3><%= team.name %></h3></div>
+            <div><%= link_to "Add Member", team_members_new_path %></div>
+            <div><%= link_to "Delete", team, method: :delete, data: { confirm: "Are you sure?" } %></div>
+          </div>
+          <% team.team_members.each do |member| %>
+            <div class="admin_presentation_display_element">
+              <div><h3><%= member.user.email %></h3></div>
+              <div><%= link_to "View", "#" %></div>
+              <div><%= link_to "Remove", member, method: :delete, data: { confirm: "Are you sure?" } %></div>
+            </div>
+          <% end %>
+          
+        </div>
+
+      <% end %>
+
+</div>

@@ -1,0 +1,11 @@
+<div id="presentation_show">
+    <h2><%= @presentation.name %></h2>
+    <h3>By <%= @presentation.team.name %></h3>
+
+    <% @presentation.surveys.each do |survey| %>
+      <div class="feedback_display_element">
+        <div><h3>Overall: <%= survey.overall %></h3></div>
+        <div><%= link_to "Full Results", survey %></div>
+      </div>
+    <% end %>
+</div>

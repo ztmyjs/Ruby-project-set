@@ -1,0 +1,489 @@
+<%= form_with(model: survey, local: true) do |form| %>
+  <% if survey.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(survey.errors.count, "error") %> prohibited this survey from being saved:</h2>
+
+      <ul>
+        <% survey.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <button type="button" onclick="auto_fill_delivery()">Virtual Presentation </button>
+  <%= javascript_pack_tag 'survey_helper' %>
+
+  <%= form.hidden_field :presentation_id, value: params[:p_id].to_i %>
+
+
+  <table class="questions_table" id="organization_table">
+    <tr><th>Presentation Organization</th><th>Strongly Agree</th><th>Agree</th><th>Indifferent</th><th>Disagree</th><th>Strongly Disagree</th><th>Not Applicable</th></tr>
+      <div class="field">
+        <tr><td>The introduction gave me a clear idea of the topic.</td>
+        <td>
+        <%= form.radio_button :organization_1, 'Strongly Agree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :organization_1, 'Agree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :organization_1, 'Indifferent' %> 
+        </td>
+        <td>
+        <%= form.radio_button :organization_1, 'Disagree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :organization_1, 'Strongly Disagree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :organization_1, 'Not Applicable' %> 
+        </td>
+        </tr>
+      </div>
+
+ 
+    
+      <div class="field">
+        <tr><td>The introduction gave me a clear idea of the direction the presentation would take.</td>
+        <td>
+        <%= form.radio_button :organization_2, 'Strongly Agree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :organization_2, 'Agree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :organization_2, 'Indifferent' %> 
+        </td>
+        <td>
+        <%= form.radio_button :organization_2, 'Disagree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :organization_2, 'Strongly Disagree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :organization_2, 'Not Applicable' %> 
+        </td>
+        </tr>
+      </div>
+
+      <div class="field">
+        <tr><td>The presentation presented information in logical, interesting sequence.</td>
+        <td>
+        <%= form.radio_button :organization_3, 'Strongly Agree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :organization_3, 'Agree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :organization_3, 'Indifferent' %> 
+        </td>
+        <td>
+        <%= form.radio_button :organization_3, 'Disagree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :organization_3, 'Strongly Disagree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :organization_3, 'Not Applicable' %> 
+        </td>
+        </tr>
+      </div>
+
+      <div class="field">
+        <tr><td>The conclusion did a good job of summarizing the content of the presentation.</td>
+        <td>
+        <%= form.radio_button :organization_4, 'Strongly Agree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :organization_4, 'Agree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :organization_4, 'Indifferent' %> 
+        </td>
+        <td>
+        <%= form.radio_button :organization_4, 'Disagree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :organization_4, 'Strongly Disagree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :organization_4, 'Not Applicable' %> 
+        </td>
+        </tr>
+      </div>
+
+      <div class="field">
+        <tr><td>Enough essential information was given to allow me to effectively evaluate the topic.</td>
+        <td>
+        <%= form.radio_button :organization_5, 'Strongly Agree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :organization_5, 'Agree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :organization_5, 'Indifferent' %> 
+        </td>
+        <td>
+        <%= form.radio_button :organization_5, 'Disagree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :organization_5, 'Strongly Disagree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :organization_5, 'Not Applicable' %> 
+        </td>
+        </tr>
+      </div>
+
+      <div class="field">
+        <tr><td>The presentation was free from irrelevant or filler information.</td>
+        <td>
+        <%= form.radio_button :organization_6, 'Strongly Agree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :organization_6, 'Agree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :organization_6, 'Indifferent' %> 
+        </td>
+        <td>
+        <%= form.radio_button :organization_6, 'Disagree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :organization_6, 'Strongly Disagree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :organization_6, 'Not Applicable' %> 
+        </td>
+        </tr>
+      </div>
+
+      <div class="field">
+        <tr><td>The presentation filled the time allotted.</td>
+        <td>
+        <%= form.radio_button :organization_7, 'Strongly Agree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :organization_7, 'Agree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :organization_7, 'Indifferent' %> 
+        </td>
+        <td>
+        <%= form.radio_button :organization_7, 'Disagree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :organization_7, 'Strongly Disagree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :organization_7, 'Not Applicable' %> 
+        </td>
+        </tr>
+      </div>
+
+  </table>
+
+  <table class="questions_table" id="content_table">
+    <tr><th>Presentation Content</th><th>Strongly Agree</th><th>Agree</th><th>Indifferent</th><th>Disagree</th><th>Strongly Disagree</th><th>Not Applicable</th></tr>
+      <div class="field">
+        <tr><td>I could easily follow the main points of the presentation.</td>
+        <td>
+        <%= form.radio_button :content_1, 'Strongly Agree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :content_1, 'Agree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :content_1, 'Indifferent' %> 
+        </td>
+        <td>
+        <%= form.radio_button :content_1, 'Disagree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :content_1, 'Strongly Disagree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :content_1, 'Not Applicable' %> 
+        </td>
+        </tr>
+      </div>
+
+      <div class="field">
+        <tr><td>The presenter had a clear understanding of the material presented.</td>
+        <td>
+        <%= form.radio_button :content_2, 'Strongly Agree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :content_2, 'Agree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :content_2, 'Indifferent' %> 
+        </td>
+        <td>
+        <%= form.radio_button :content_2, 'Disagree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :content_2, 'Strongly Disagree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :content_2, 'Not Applicable' %> 
+        </td>
+        </tr>
+      </div>
+
+      <div class="field">
+        <tr><td>The plans, recommendations and/or conclusions are consistent with the findings.</td>
+        <td>
+        <%= form.radio_button :content_3, 'Strongly Agree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :content_3, 'Agree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :content_3, 'Indifferent' %> 
+        </td>
+        <td>
+        <%= form.radio_button :content_3, 'Disagree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :content_3, 'Strongly Disagree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :content_3, 'Not Applicable' %> 
+        </td>
+        </tr>
+      </div>
+
+      <div class="field">
+        <tr><td>Presenter answers all questions with explanations and elaboration.</td>
+        <td>
+        <%= form.radio_button :content_4, 'Strongly Agree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :content_4, 'Agree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :content_4, 'Indifferent' %> 
+        </td>
+        <td>
+        <%= form.radio_button :content_4, 'Disagree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :content_4, 'Strongly Disagree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :content_4, 'Not Applicable' %> 
+        </td>
+        </tr>
+      </div>
+
+  </table>
+
+  <table class="questions_table" id="visuals_table">
+    <tr><th>Presentation Visuals</th><th>Strongly Agree</th><th>Agree</th><th>Indifferent</th><th>Disagree</th><th>Strongly Disagree</th><th>Not Applicable</th></tr>
+      <div class="field">
+        <tr><td>The visuals were effective in enhancing the message.</td>
+        <td>
+        <%= form.radio_button :visuals_1, 'Strongly Agree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :visuals_1, 'Agree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :visuals_1, 'Indifferent' %> 
+        </td>
+        <td>
+        <%= form.radio_button :visuals_1, 'Disagree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :visuals_1, 'Strongly Disagree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :visuals_1, 'Not Applicable' %> 
+        </td>
+        </tr>
+      </div>
+
+      <div class="field">
+        <tr><td>The visuals were legible and easy to read.</td>
+        <td>
+        <%= form.radio_button :visuals_2, 'Strongly Agree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :visuals_2, 'Agree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :visuals_2, 'Indifferent' %> 
+        </td>
+        <td>
+        <%= form.radio_button :visuals_2, 'Disagree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :visuals_2, 'Strongly Disagree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :visuals_2, 'Not Applicable' %> 
+        </td>
+        </tr>
+      </div>
+
+      <div class="field">
+        <tr><td>Visuals were free from grammar and formatting errors.</td>
+        <td>
+        <%= form.radio_button :visuals_3, 'Strongly Agree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :visuals_3, 'Agree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :visuals_3, 'Indifferent' %> 
+        </td>
+        <td>
+        <%= form.radio_button :visuals_3, 'Disagree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :visuals_3, 'Strongly Disagree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :visuals_3, 'Not Applicable' %> 
+        </td>
+        </tr>
+      </div>
+
+      <div class="field">
+        <tr><td>The number of visual aids enhanced the presentation.</td>
+        <td>
+        <%= form.radio_button :visuals_4, 'Strongly Agree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :visuals_4, 'Agree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :visuals_4, 'Indifferent' %> 
+        </td>
+        <td>
+        <%= form.radio_button :visuals_4, 'Disagree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :visuals_4, 'Strongly Disagree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :visuals_4, 'Not Applicable' %> 
+        </td>
+        </tr>
+      </div>
+
+      <div class="field">
+        <tr><td>The visuals were displayed for an appropriate time and had no annoying transition effect.</td>
+        <td>
+        <%= form.radio_button :visuals_5, 'Strongly Agree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :visuals_5, 'Agree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :visuals_5, 'Indifferent' %> 
+        </td>
+        <td>
+        <%= form.radio_button :visuals_5, 'Disagree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :visuals_5, 'Strongly Disagree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :visuals_5, 'Not Applicable' %> 
+        </td>
+        </tr>
+      </div>
+  </table>
+
+  <table class="questions_table" id="delivery_table">
+    <tr><th>Presentation Delivery</th><th>Strongly Agree</th><th>Agree</th><th>Indifferent</th><th>Disagree</th><th>Strongly Disagree</th><th>Not Applicable</th></tr>
+      <div class="field">
+        <tr><td>The presenter spoke clearly, was easily heard, and maintained an appropriate talking rate.</td>
+        <td>
+        <%= form.radio_button :delivery_1, 'Strongly Agree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :delivery_1, 'Agree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :delivery_1, 'Indifferent' %> 
+        </td>
+        <td>
+        <%= form.radio_button :delivery_1, 'Disagree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :delivery_1, 'Strongly Disagree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :delivery_1, 'Not Applicable' %> 
+        </td>
+        </tr>
+      </div>
+
+      <div class="field">
+        <tr><td>The presenter maintained a good posture and made effective use of hand and body gesture.</td>
+        <td>
+        <%= form.radio_button :delivery_2, 'Strongly Agree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :delivery_2, 'Agree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :delivery_2, 'Indifferent' %> 
+        </td>
+        <td>
+        <%= form.radio_button :delivery_2, 'Disagree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :delivery_2, 'Strongly Disagree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :delivery_2, 'Not Applicable' %> 
+        </td>
+        </tr>
+      </div>
+
+      <div class="field">
+        <tr><td>The presenter maintained eye contact with the audience.</td>
+        <td>
+        <%= form.radio_button :delivery_3, 'Strongly Agree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :delivery_3, 'Agree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :delivery_3, 'Indifferent' %> 
+        </td>
+        <td>
+        <%= form.radio_button :delivery_3, 'Disagree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :delivery_3, 'Strongly Disagree' %> 
+        </td>
+        <td>
+        <%= form.radio_button :delivery_3, 'Not Applicable' %> 
+        </td>
+        </tr>
+      </div>
+
+  </table>
+
+  <div class="field">
+    <%= form.label "Overall" %>
+    <%= form.text_field :overall %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Additional Comments" %>
+    <%= form.text_field :comments %>
+  </div>
+
+
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

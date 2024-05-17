@@ -1,0 +1,11 @@
+<div id="presentations_index">
+
+<h2>Presentations</h2>
+
+<% if current_user.admin == true %>
+    <%= render "presentations/admin_display" %>
+<% else %>
+    <%= render "presentations/user_display" %>
+<% end %>
+
+

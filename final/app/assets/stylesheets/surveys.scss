@@ -1,0 +1,67 @@
+// Place all the styles related to the surveys controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+table.survey_display_table, table.survey_response_table, table.team_index_table, table.questions_table{
+  border: solid;
+  margin-left: 40px;
+
+  th{
+  	background-color: firebrick;
+	color: lightgrey;
+	padding: 20px;
+  }
+
+  td{
+  	text-align: center;
+	padding: 20px;
+	border: solid;
+	border-width: 2px;
+	font-size: 15px;
+  }
+}
+
+div#survey_display.p{
+	font-size: 15px;
+}
+
+#survey_index_page {
+
+	.user_survey_display {
+        max-width: 800px;
+        border: outset;
+        border-radius: 30px;
+        margin-left: 50px;
+        margin-bottom: 50px;
+	}
+      
+	.user_survey_display_element {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        border: inset;
+        border-radius: 20px;
+        border-width: 5px;
+        justify-items: center;
+        align-items: center;
+        margin: 5px;
+        
+        background-image: linear-gradient(to right, firebrick, lightgrey);
+	}
+
+	a{
+        text-decoration: none;
+        border: inset;
+        border-radius: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background-color: lightgrey;
+        color: firebrick;
+	}
+	
+	h3 {
+		margin-left: 10px;
+	}
+      
+}

@@ -1,0 +1,48 @@
+// Place all the styles related to the teams controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+#teams_index{
+
+    .admin_team_presentation_display {
+        max-width: 800px;
+        border: outset;
+        border-radius: 30px;
+        margin-bottom: 50px;
+        margin-left: 50px;
+    }
+      
+    .admin_presentation_display_element {
+        display: grid;
+        grid-template-columns: 3fr 1fr 1fr;
+        border: inset;
+        border-radius: 20px;
+        border-width: 5px;
+        justify-items: center;
+        align-items: center;
+        margin: 5px;
+        
+        background-image: linear-gradient(to right, firebrick, lightgrey);
+    }
+      
+      
+    a{
+        text-decoration: none;
+        border: inset;
+        border-radius: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background-color: lightgrey;
+        color: firebrick;
+    }
+      
+    .team_header{
+        display: grid;
+        grid-template-columns: 3fr 1fr 1fr;
+        justify-items: center;
+        align-items: center;
+        
+    }
+}

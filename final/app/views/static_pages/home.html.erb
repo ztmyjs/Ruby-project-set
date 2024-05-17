@@ -1,0 +1,9 @@
+<div id="home_page">
+    <% if user_signed_in? && current_user.admin == true %>
+        <%= render "static_pages/adminhome" %>
+    <% elsif user_signed_in? %>
+        <%= render "static_pages/userhome" %>
+    <% else %>
+        <h2>You are not currently logged in</h2>
+    <% end %>
+</div>

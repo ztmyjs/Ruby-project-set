@@ -1,0 +1,66 @@
+<div id="nav_bar">
+    <div class="site_title">
+        <h1>Survey Source</h1>
+    </div>
+
+    <div class="nav_elements">
+        <ul>
+            <% if user_signed_in? && current_user.admin == true %>
+
+                <li class="nav_item">
+                    <%= link_to "Home", root_path %>
+                </li>
+                <li class="nav_item">
+                    <%= link_to "Teams", teams_index_path %>
+                </li>
+
+                <li class="nav_item">
+                    <%= link_to "Presentations", presentations_index_path %>
+                </li>
+
+                <li class="nav_item">
+                    <%= link_to "Surveys", surveys_index_path %>
+                </li>
+                
+                <li class="nav_item">
+                    <%= link_to "Add to Team", team_members_new_path %>
+                </li>
+
+                <div class="signout_link">
+                    <li class="nav_item">
+                        <%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
+                    </li>
+                </div>
+            <% elsif user_signed_in? %>
+                        
+                <li class="nav_item">
+                    <%= link_to "Home", root_path %>
+                </li>
+                
+                <li class="nav_item">
+                    <%= link_to "Presentations", presentations_index_path %>
+                </li>
+
+                <div class="signout_link">
+                    <li class="nav_item">
+                        <%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
+                    </li>
+                </div>
+            <% else %>
+
+                
+
+                <li class="nav_item">
+                    <%= link_to "Sign Up", new_user_registration_path %>
+                </li>
+
+                <div class="signout_link">
+                    <li class="nav_item">
+                        <%= link_to "Sign In", user_session_path %>
+                    </li>
+                </div>
+
+            <% end %>
+        </ul>
+    </div>
+</div>

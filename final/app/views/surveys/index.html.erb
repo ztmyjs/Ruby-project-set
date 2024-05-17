@@ -1,0 +1,17 @@
+<div id="survey_index_page">
+    <h2>Surveys</h2>
+
+    <% @users.each do |user| %>
+      <div class="user_survey_display">
+        <div class="user_display_header">
+            <div><h3><%= user.email %></h3></div>
+        </div>
+        <% user.surveys.each do |survey| %>
+          <div class="user_survey_display_element">
+              <div><h3><%= survey.presentation.name %></h3></div>
+              <div><%= link_to "View Feedback", survey %></div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+</div>

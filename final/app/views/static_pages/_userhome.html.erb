@@ -1,0 +1,26 @@
+<div id="user_home">
+  <div class="user_header">
+    <h1>Welcome <%= current_user.email %></h1>
+  </div>
+  
+  <div class="user_teams_list">
+    <table>
+      <tr><th>My Teams</th></tr>
+      <% current_user.teams.each do |team| %>
+        <tr><td><%= link_to team.name, team %></td></tr>
+      <% end %>
+    </table>
+  </div>
+  <div class="user_todo_list">
+        <h2>To-Do</h2>
+        <% @presentations.each do |p| %>
+            <% if current_user.surveys.exists?(:presentation_id => p.id) == false && p.team.users.exists?(:id => current_user.id) == false %>
+                <div class="todo_display_element">
+                  <div><%= link_to 'Take Survey', surveys_new_path(p_id: p.id) %></div>
+                  <div><p>for <%= p.name %> by <%= p.team.name %></p></div>
+                </div>
+            <% end %>
+        <% end %>
+  </div>
+  
+</div>
