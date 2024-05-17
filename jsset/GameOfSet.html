@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>The Game of Set</title>
+    <link href="GameOfSet.css" rel="stylesheet" />
+    <script src="GameOfSet.js" defer></script>
+  </head>
+  <body>
+      <div id="head">
+          <img src="card_images/Set.png" alt="The Game Of Set Logo" width="301" height="168">
+        <h1>The Game of Set</h1>
+      
+      </div>
+
+    <div id="gameArea">
+        <div id="cards">
+      <table>
+          <tr id="row1">
+              
+          </tr>
+          <tr id="row2">
+              
+        </tr>
+        <tr id="row3">
+              
+        </tr>
+      </table>
+      
+      </div>
+      
+      
+    </div>
+    <div id="buttons">
+        <button id = "set1" type="button" onclick="setButton()">SET P1</button>
+        <button id = "set2" type="button" onclick="setButton2()">SET P2</button>
+        <button id = "add" type="button" onclick="addCards()">ADD</button>
+        <button id = "hint" type="button" onclick="hint()">HINT</button>
+      </div>
+    
+      <div id="score">
+          <h2 id="player1Score">Player1: 0</h2>
+          <h2 id="player2Score">Player2: 0</h2>
+      </div>
+      <div id="instructions">
+          <h2>Instructions:</h2>
+          <ol>
+              <li>There are 81 cards in the deck. Each card has 4 attributes: shape, shading, color, number.</li>
+              <li>A valid set is three cards that, for each attribute, have either all the same value or all different values.</li>
+              <li>Left click on a card to select it.</li>
+              <li>When three cards are selected, click the "SET P1" button to verify if the set is valid. A point will be rewarded for a valid set and deducted for an invalid set.</li>
+              <li>For two players, Player 2 will use the "SET P2" button to verify their set.</li>
+              <li>If no valid sets are present in the dealt cards, click the "ADD" button to add three more cards.</li>
+              <li>The hint button will select one card of a valid set from the dealt cards if a valid set is present</li>
+              <li>The game ends when there are no more cards remaining or there are no more valid sets in the remaining cards. The player with the most points wins!</li>
+              <li>To play again, refresh the page.</li>
+          </ol>
+      </div>
+</body>
+</html>
