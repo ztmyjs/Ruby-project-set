@@ -1,8 +1,4 @@
-# CSE 3901 Project 3
 ## Group4-webscraping
-
-Gets sourse data from CSE Class Schedule website: https://cse.osu.edu/courses
-The project will output CSE course information such as description, prereqs, and units from course search list file.
 
 ### Gem:
 
