@@ -80,5 +80,3 @@ From here, you have full control over the application.
 
     - users can be assigned to more than one team without conflict, and teams can also have multiple presentations without conflict.
 
-# Presentation Slides
-https://docs.google.com/presentation/d/15R0NY1zVLCOASg8QgEf0wI4SHvJbgZy9JeROsEG59uI/edit?usp=sharing
