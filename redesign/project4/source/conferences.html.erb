@@ -1,0 +1,25 @@
+---
+title: Conference Papers
+---
+<div class="content">
+  <h3>Conference Papers</h3>
+  <table>
+    <tr>
+      <th>Title</th>
+      <th>Authors</th>
+      <th>Conference/Journal</th>
+    </tr>
+
+    <% data.conferences.conferences.each do |p| %>
+      <tr>
+        <% if p.link == "" %>
+          <td> <%= p.title %> </td>
+        <% else %>
+          <td> <a href="<%= p.link %>"> <%= p.title %> </a></td>
+        <% end %>
+        <td> <%= p.authors %> </td>
+        <td> <%= p.where %> </td>
+      </tr>
+    <% end %>
+  </table>
+</div>

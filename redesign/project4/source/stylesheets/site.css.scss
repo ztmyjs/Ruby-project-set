@@ -1,0 +1,142 @@
+.page-content{
+	display: grid;
+        grid-template-areas: 
+          "header"
+          "nav"
+          "body"
+          "footer";
+}
+#page-header{
+ 	grid-area: header;
+	background-image: linear-gradient(right, lightgray, white);
+	border-radius: 5px;
+}
+
+#page-header div{
+	float: left;
+	align: center;
+	padding: 15px;
+}
+
+.content{
+   	grid-area: body;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#page-footer{
+        grid-area: footer;
+}
+
+
+#menu-bar {
+	grid-area: nav;
+}
+
+#menu-bar a {
+	float: left;
+        background-color: lightgray;
+        color: firebrick;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+}
+
+#menu-bar a:hover {
+        background-color: firebrick;
+        color: white;
+}
+
+#menu-bar a.active {
+        background-color: firebrick;
+        color: white;
+}
+
+
+#page-footer {
+        display: grid;
+        grid-template-areas: "left middle ... right";
+        justify-items: left;
+        background-color: lightgray;
+	border-radius: 5px;
+}
+            
+#email-address{
+        padding: 20px;
+        grid-area: left;        
+}
+
+#office{
+        padding: 20px;
+        grid-area: middle;
+}
+
+#archlab-image{
+        padding: 20px;
+        grid-area: right;
+}
+
+
+#bio{
+	width: 60%;
+        padding: 10px;
+	float: left;
+}
+      
+#self-image{
+        width: 30%;
+        padding: 10px;
+	float: right;
+}
+
+table, th, tr, td{
+	border: 3px solid darkred;
+	border-collapse: collapse;
+}
+
+table{
+	margin-left: 30px;
+	margin-right: 30px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+th{
+	color: white;
+	font-size: 20px;
+}
+
+tr th{ background-color: darkred;}
+
+tr:nth-child(even){
+	background-color: #f2f2f2;
+}
+
+td{
+	font-size: 14px;
+	padding: 5px;
+}
+
+a{
+	color: #1a1a1a;
+}
+
+h1, h3 {
+	color: #3a3a3a;
+}
+h2{
+	color: #5a5a5a;
+	font-size: 16px;
+}
+
+h3{
+	margin-left: 30px;
+}
+
+p{
+	font-size: 13px;
+	margin-left: 20px;
+	margin-right: 40px;
+}
+

@@ -1,0 +1,46 @@
+<div id="menu-bar">
+            <p>
+            <% if current_page.data.title == "About Me"%>
+              <a class="active" href="index.html">About Me</a>
+            <%else%>
+              <a href="index.html">About Me</a>
+            <%end%>
+
+            <% if current_page.data.title == "Presentations"%>
+              <a class="active" href="presentations.html">Presentations</a>
+            <%else%>
+              <a href="presentations.html">Presentations</a>
+            <%end%>
+
+            <% if current_page.data.title == "Conference Papers"%>
+              <a class="active" href="conferences.html">Conference Papers</a>
+            <%else%>
+              <a href="conferences.html">Conference Papers</a>
+            <%end%>
+
+            <% if current_page.data.title == "Workshop Papers"%>
+              <a class="active" href="workshop.html">Workshop Papers</a>
+            <%else%>
+              <a href="workshop.html">Workshop Papers</a>
+            <%end%>
+
+            <% if current_page.data.title == "Theses"%>
+              <a class="active" href="theses.html">Theses</a>
+            <%else%>
+              <a href="theses.html">Theses</a>
+            <%end%>
+
+            <% if current_page.data.title == "Technical Reports"%>
+              <a class="active" href="techreports.html">Technical Reports</a>
+            <%else%>
+              <a href="techreports.html">Technical Reports</a>
+            <%end%>
+
+            <% if current_page.data.title == "Tools"%>
+              <a class="active" href="tools.html">Tools</a>
+            <%else%>
+              <a href="tools.html">Tools</a>
+            <%end%>
+
+            </p>
+</div>

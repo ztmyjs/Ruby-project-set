@@ -1,0 +1,5 @@
+Redesign of Dr. Radu Teodorescu’s Website
+
+This is our redesign and improvement of Dr. Teodorescu’s website using the Ruby-based software “Middleman”. It is necessary to install the Middleman gem to view the site correctly. Enter “gem install middleman” in a console window to install the software. If you plan on building/deploying this site or a site you generate with Middleman, you most likely need to update the versions of each feature, which can be done by modifying the Gemfile and completing another bundle install of Middleman.  
+
+The navigation bar was fixed so individual static pages would cross link properly, as well as reformatting it to be clearer and more appealing to the user. The styling was redesigned somewhat but was still consistent with OSU colors. Many of the hyperlinks were no longer available or were not the correct path relative to this project; they were either fixed or removed when necessary. Only core HTML and CSS were used for this redesign, and all HTML files validate.
